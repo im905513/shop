@@ -1,0 +1,1199 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	/* border: 0; */
+	/*outline: 0; */
+	/*font-size: 100%; */
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	/*border-collapse: collapse; */
+	border-spacing: 0;
+}
+
+
+body {
+	font-family: "Georgia、微軟正黑體、新細明體、細明體、Arial";
+	color: #666666;	
+	background-color:#fff;
+	line-height: 1.5em;
+}
+#maincontain{
+	width: 100%;	
+	height: auto;	
+}
+#contentbox{
+	width: 100%;	
+	height: auto;
+	margin: 0 auto;
+}
+#headerbox{
+	width: 100%;	
+	height: 60px;
+	background-color:#8cc63f;
+}
+#header{
+	width: 1137px;
+	height: 60px;
+	margin: 0 auto;
+}
+#header a.logo{
+	float: left;
+	height: 60px;
+}
+#header .usr{
+	float: left;
+	width: 560px;
+	height: 60px;
+	line-height: 60px;
+	color: #fff;
+	font-size: 14px;
+	text-align: right;
+	padding: 0 16px 0 0;
+}
+#header ul, #header ul li{
+	float: left;
+
+}
+#header ul li{
+	line-height: 60px;
+	margin: 0 10px 0 10px;
+}
+#header ul li a{
+	line-height: 60px;
+	text-decoration: none;
+	color: #fff;	
+	font-size: 14px;
+}
+
+
+#mybox, #footerbox, #fbbox{
+	clear: both;
+}
+
+#mybox{
+	width: 1137px;
+	min-height: 460px;
+	height: auto;
+	margin: 0 auto;
+}
+
+#mybox .leftbox{
+	float: left;
+	width: 191px;
+	min-height: 435px;
+	height: auto;
+	padding: 17px 25px 25px 29px;
+}
+#mybox .rightbox{
+	margin-left: 245px;
+	width: auto;
+	min-height: 460px;
+	height: auto;
+	padding: 17px 0px 0 0;
+}
+#mybox .leftbox .box{
+	width: 100%;
+	background-color: #f3f3f3;
+}
+
+#mybox .leftbox .box .headbox{
+	position: relative;
+	width: 100%;
+	height: 96px;
+	border-bottom: solid #a59b9b 3px; 
+}
+#mybox .leftbox .box .headbox .imgbox{
+	position: absolute;
+	top:7px;
+	left: 7px;
+	width: 58px;
+	height: 82px;
+	background-color: #ccc;
+
+}
+#mybox .leftbox .box .headbox p{
+	position: absolute;
+	top:50px;
+	left: 88px;
+	display: inline-block;
+	width: 100px;
+	height: 36px;
+	font-size: 14px;
+	color: #777777;
+	line-height: 18px;
+}
+#mybox .leftbox .box .headbox p span{
+	color: #86a45d;
+}
+#mybox .leftbox .box ul{}
+#mybox .leftbox .box ul li{position:relative; border-bottom: 2px solid #dedede;}
+#mybox .leftbox .box ul li:nth-child(1){
+	background: url("images/icon/icon_1.png");
+	background-repeat: no-repeat;
+	background-position: 10px 15px; 
+}
+#mybox .leftbox .box ul li:nth-child(2){
+	background: url("images/icon/icon_2.png");
+	background-repeat: no-repeat;
+	background-position: 10px 15px; 
+}
+#mybox .leftbox .box ul li:nth-child(3){
+	background: url("images/icon/icon_3.png");
+	background-repeat: no-repeat;
+	background-position: 10px 15px; 
+}
+#mybox .leftbox .box ul li:nth-child(4){
+	background: url("images/icon/icon_4.png");
+	background-repeat: no-repeat;
+	background-position: 10px 15px; 
+}
+#mybox .leftbox .box ul li:nth-child(5){
+	background: url("images/icon/icon_5.png");
+	background-repeat: no-repeat;
+	background-position: 10px 15px; 
+}
+#mybox .leftbox .box ul li:nth-child(6){
+	background: url("images/icon/icon_6.png");
+	background-repeat: no-repeat;
+	background-position: 10px 15px; 
+}
+
+#mybox .leftbox .box ul li a{
+	display: block;
+	height: 55px;
+	line-height: 55px;
+	width: auto;
+	color:#86a45d;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 0 0 0 48px;
+	text-decoration: none;	
+	letter-spacing: 1px;
+}
+#mybox .leftbox .box ul li.active{
+	border-bottom: solid #8cc63f 8px;
+	height: 49px;
+}
+#mybox .leftbox .box ul li.active a{	
+	height: 49px;
+	line-height: 49px;
+}
+#mybox .leftbox .box ul li div.circle{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50% 50%;
+	background-color: #900;
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	line-height: 20px;
+}
+
+
+
+#mybox .rightbox .left{
+	float: left;
+	width: 106px;
+	min-height: 100px;
+	padding-left: 113px;
+	padding-right: 36px;
+	overflow: hidden;
+}
+#mybox .rightbox .right{
+	width: auto;
+	min-height: 100px;
+	margin-left: 255px;
+}
+#mybox .rightbox .left a{
+	display: block;
+	font-size: 12px;
+	color: #8ab0ff;
+	line-height:56px;
+	text-align: center;
+	text-decoration: none;
+}
+#mybox .rightbox .right table tr td div.namebox, #mybox .rightbox .right table tr td div.phonebox{
+	width:80%;
+	border-bottom:2px solid #777;
+}
+#mybox .rightbox .right table tr td div.agebox{
+	width:80px;
+	border-bottom:2px solid #777;
+}
+#mybox .rightbox .right table tr td div.birthdaybox{
+	width:80%;
+	border-bottom:2px solid #777;
+	background: url("images/icon/icon_7.png");
+	background-repeat:no-repeat;
+	background-position: 165px 0px;
+}
+#mybox .rightbox .right table tr td input.name, #mybox .rightbox .right table tr td input.phone{
+	width:80%;
+	font-size: 18px;
+	line-height: 35px;
+	height: 35px;
+	border:0px;
+}
+#mybox .rightbox .right table tr td input.age{
+	width:30px;
+	font-size: 18px;
+	line-height: 35px;
+	height: 35px;
+	border:0px;
+}
+#mybox .rightbox .right table tr td input.birthday{
+	width:80%;
+	font-size: 18px;
+	line-height: 35px;
+	height: 35px;
+	border:0px;
+}
+#mybox .rightbox .right table tr td select.sexselect{
+	font-size: 18px;
+	line-height: 35px;
+	height: 35px;
+	width: 50px;
+}
+#mybox .rightbox .right table tr td select.address1, #mybox .rightbox .right table tr td select.address2{
+	float: left;
+	font-size: 18px;
+	line-height: 35px;
+	height: 35px;
+	min-width: 80px;
+	margin-right: 15px;
+}
+#mybox .rightbox .right table tr td input.address{
+	width:100%;
+	font-size: 18px;
+	line-height: 35px;
+	height: 35px;
+	border:0px;
+}
+#mybox .rightbox .right table tr td div.addressbox{
+	float: left;
+	width:275px;
+	border-bottom:2px solid #777;
+}
+/* ======================================= */
+#schoolbox, #jobbox, #langbox{
+	width: 467px;
+	min-height: 25px;
+	font-size: 18px;
+	margin-bottom: 35px;
+}
+#schoolbox div.header, #jobbox div.header, #langbox div.header{
+	width: 467px;
+	height: 25px;
+	font-size: 18px;
+	border-bottom: 2px solid #666; 
+}
+#schoolbox div.header div.title, #jobbox div.header div.title, #langbox div.header div.title{
+	float: left;
+	width: 380px;
+	height: 25px;
+	line-height: 25px;
+}
+#schoolbox div.header div.add, #jobbox div.header div.add, #langbox div.header div.add{
+	font-size: 12px;
+	float: left;
+	width: 60px;
+	height: 25px;
+	line-height: 25px;
+}
+#schoolbox div.header div.addbtn, #jobbox div.header div.addbtn, #langbox div.header div.addbtn{
+	margin-left: 440px;
+	width: 20px;
+	height: 20px;
+	font-size: 16px;	
+	background-color: #666;
+	text-align: center;
+	line-height: 20px;
+	color: #fff;
+	cursor: pointer;
+}
+#schoolbox div.listitem, #jobbox div.listitem, #langbox div.listitem{
+	width: 467px;
+	height: 30px;
+	font-size: 14px;
+	background-color: #eee;
+	border-top: 10px solid #fff; 
+	line-height: 30px;
+}
+#schoolbox div.listitem div.msg, #jobbox div.listitem div.msg, #langbox div.listitem div.msg{
+	float: left;
+	width: 390px;
+	height: 30px;
+	line-height: 30px;
+}
+#schoolbox div.listitem a.editbtn, #jobbox div.listitem a.editbtn, #langbox div.listitem a.editbtn{
+	float: left;
+	display: block;
+	width: 40px;
+	height: 30px;
+	line-height: 30px;
+	cursor: pointer;
+	text-decoration: none;
+	color: #666;
+}
+#schoolbox div.listitem a.delbtn, #jobbox div.listitem a.delbtn, #langbox div.listitem a.delbtn{
+	margin-left: 430px;
+	display: block;
+	width: 40px;
+	height: 30px;
+	line-height: 30px;
+	cursor: pointer;
+	text-decoration: none;
+	color: #666;
+}
+/* ======================================= */
+#dislikeworkingbox, #skillbox{
+	width: 467px;
+	min-height: 25px;
+	font-size: 18px;
+	margin-bottom: 35px;
+}
+#dislikeworkingbox div.header, #skillbox div.header{
+	width: 467px;
+	height: 25px;
+	font-size: 18px;
+	border-bottom: 2px solid #666; 
+	margin-bottom: 20px;
+}
+#dislikeworkingbox input, #skillbox input{
+	width: 15px;
+	height: 15px;
+	background-color: #fff;
+	line-height: 35px;
+}
+/* ======================================= */
+select.EmploymentStatus, select.LookingForWork{
+	font-size: 18px;
+	line-height: 35px;
+	height: 35px;
+	min-width: 80px;
+	margin-right: 15px;
+}
+input.code, input.remark{
+	width:370px;
+	font-size: 18px;
+	line-height: 35px;
+	height: 35px;
+}
+/* ======================================= */
+#aboutmebox{
+	width: 467px;
+	min-height: 25px;
+	font-size: 18px;
+	margin-bottom: 35px;
+}
+#aboutmebox div.header{
+	width: 467px;
+	height: 25px;
+	font-size: 18px;
+	border-bottom: 2px solid #666; 
+	margin-bottom: 20px;
+}
+#aboutmebox textarea{
+	width: 100%;
+	height: 130px;
+}
+#aboutmebox input.upfilebtn{
+	width:  76px;
+	height:30px;
+	line-height: 30px;
+	text-align: center;
+	color: #fff;
+	background-color: #666;
+	border: 1px solid #eee;
+}
+#aboutmebox input.upfile{
+	border: 0px;
+}
+#aboutmebox input.Submit{
+	display: block;
+	width:  130px;
+	height:38px;
+	line-height: 38px;
+	text-align: center;
+	color: #fff;
+	background-color: #72a330;
+	border: 0px;
+	margin: 0 auto;
+	cursor: pointer;
+}
+/* ======================================= */
+#myeventsbox p.title{
+	font-size: 24px;
+	line-height: 48px;
+}
+#myeventsbox div.eventsbox{
+	display: inline-block;
+	margin-bottom: 35px;
+}
+#myeventsbox div.item{
+	float: left;
+	width: 202px;
+	min-height: 265px;
+	background-color: #f3f3f3;
+	border-bottom: solid #a59b9b 3px;
+	margin-bottom: 25px;
+	margin-right: 10px;
+}
+
+#myeventsbox div.item:nth-child(4n + 1){
+	margin-right: 0px;	
+}
+#myeventsbox div.item div.imgbox{
+	display: inline-block;
+	overflow: hidden;
+	width: 205px;
+	height: 206px;
+}
+#myeventsbox div.item p.title{
+	display: block;
+	width: 95%;
+	margin: 0 auto;
+	font-size: 16px;
+	line-height: 24px;
+	color: #000;
+}
+#myeventsbox div.item p.date{
+	display: block;
+	width: 95%;
+	margin: 0 auto;
+	font-size: 16px;
+	line-height: 24px;
+	color: #777;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#myeventsbox p.line{
+	width: 845px;
+	height:0px;
+	border-top: 3px solid #eee;
+}
+#myeventsbox a.morebtn{
+	display: table;
+	width: 125px;
+	height: 35px;
+	line-height: 35px;
+	background-color: #aaa;
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	text-decoration: none;
+	margin-left: 715px;
+	margin-bottom: 10px;
+}
+/* ======================================= */
+#myrecordbox div.leftbox{
+	float: left;
+	width: 530px;
+	min-height: 483px;
+	margin: 0px;
+	padding: 0px;
+	padding-top: 55px;
+	padding-left: 80px;
+}
+#myrecordbox div.rightbox{
+	margin: 0px;
+	padding: 0px;
+	margin-left: 610px;
+	width: auto;
+	min-height: 483px;
+}
+#myrecordbox div.rightbox ul li div.item{
+	width: 202px;
+	height: 265px;
+	background-color: #f3f3f3;
+	border-bottom: solid #a59b9b 3px;
+	margin-bottom: 20px;
+}
+#myrecordbox div.rightbox ul li div.item div.imgbox{
+	display: inline-block;
+	overflow: hidden;
+	width: 205px;
+	height: 206px;
+}
+#myrecordbox div.rightbox ul li div.item p.title{
+	font-size: 18px;
+	line-height: 24px;
+	color: #000;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#myrecordbox div.rightbox ul li div.item p.jobname{
+	font-size: 18px;
+	line-height: 24px;
+	color: #777;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#myrecordbox div.infobox{
+	width: 465px;
+	height: auto;
+}
+#myrecordbox div.infobox ul li {float: left;}
+#myrecordbox div.infobox ul li div{
+	display: inline-block;
+	height: 28px;
+	padding: 0px 5px 0px 5px;
+	background-color: #fff;
+	color: #666;
+	font-size: 16px;
+	line-height: 28px;
+	cursor: pointer;
+}
+#myrecordbox div.infobox ul li div.active{
+	background-color: #476520;
+	color: #fff;
+}
+#myrecordbox div.infobox div.contentbox{
+	clear: left;
+	width: 100%;
+	min-height: 420px;
+	border-top: 2px #999 solid;
+}
+#myrecordbox div.eventsrecordbox{
+	display: block;
+	width: auto;
+	min-height: 420px;
+	padding: 50px 5px 10px 5px;
+}
+#myrecordbox div.eventsrecordbox div.list{
+	display: table;
+	margin-bottom: 10px;
+}
+#myrecordbox div.eventsrecordbox div.list div.title{
+	display: table-cell;
+	width: 150px;
+	height: 28px;	
+}
+#myrecordbox div.eventsrecordbox div.list div.title div.datebox{
+	width: 150px;
+	height: 28px;
+	font-size: 18px;	
+	background-color: #a5c67a;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	line-height: 28px;
+}
+#myrecordbox div.eventsrecordbox div.list div.msg{
+	display: table-cell;
+	width: auto;
+	min-height: 28px;
+	font-size: 14px;
+	line-height: 1.2em;
+	padding: 0 10px 0 40px;
+}
+#myrecordbox div.recruitedbox{
+	display: none;
+	width: auto;
+	min-height: 420px;
+	padding: 10px 5px 10px 5px;
+	font-size: 16px;
+}
+/* ======================================= */
+#view_vacanciesbox{
+	width: auto;
+	min-height: 460px;
+	height: auto;
+	padding: 15px 0px 0 20px;
+}
+#view_vacanciesbox .searchbox{
+	width: auto;
+	height: 62px;
+	font-size: 14px;
+}
+#view_vacanciesbox .searchbox input.search{
+	border: 1px solid #ccc;
+	width: 190px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 16px;
+}
+#view_vacanciesbox .searchbox span{
+	padding: 0 30px 0 30px;
+	line-height: 35px;
+}
+#view_vacanciesbox .searchbox select{
+	min-width: 120px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 16px;
+}
+#view_vacanciesbox .searchbox input.submit{
+	width: 85px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	color: #fff;
+	background-color: #666;
+	border: 0px;
+	margin-left: 30px;
+	cursor: pointer;
+}
+#view_vacanciesbox div.itemsbox{
+	display: table;
+	width: auto;
+}
+#view_vacanciesbox div.itemsbox div.item{
+	float: left;
+	width: 202px;
+	height: 265px;
+	background-color: #f3f3f3;
+	border-bottom: solid #a59b9b 3px;
+	margin-bottom: 20px;
+	margin-right: 10px;
+}
+#view_vacanciesbox div.itemsbox div.item div.imgbox{
+	display: inline-block;
+	overflow: hidden;
+	width: 205px;
+	height: 206px;
+}
+#view_vacanciesbox div.itemsbox div.item p.title{
+	font-size: 18px;
+	line-height: 24px;
+	color: #000;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#view_vacanciesbox div.itemsbox div.item p.jobname{
+	font-size: 18px;
+	line-height: 24px;
+	color: #777;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+/* ======================================= */
+#eventslistbox{
+	width: auto;
+	min-height: 460px;
+	height: auto;
+	padding: 40px 75px 0 120px;
+}
+#eventslistbox p.title{
+	width: auto;
+	font-size: 24px;
+	line-height: 1.5em;
+	margin-bottom: 28px;
+}
+#eventslistbox div.item{
+	float: left;
+	width: 202px;
+	min-height: 265px;
+	background-color: #f3f3f3;
+	border-bottom: solid #a59b9b 3px;
+	margin-bottom: 25px;
+	margin-right: 40px;
+}
+
+#eventslistbox div.item:nth-child(4n + 1){
+	margin-right: 0px;	
+}
+#eventslistbox div.item div.imgbox{
+	display: inline-block;
+	overflow: hidden;
+	width: 205px;
+	height: 206px;
+}
+#eventslistbox div.item p.title{
+	display: block;
+	width: 95%;
+	margin: 0 auto;
+	font-size: 16px;
+	line-height: 24px;
+	color: #000;
+}
+#eventslistbox div.item p.date{
+	display: block;
+	width: 95%;
+	margin: 0 auto;
+	font-size: 16px;
+	line-height: 24px;
+	color: #777;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#eventslistbox ul.page{
+	display: table;
+	margin: 0 auto;
+}
+#eventslistbox ul.page li{
+	float: left;
+}
+#eventslistbox ul.page li a{
+	display: block;
+	width: 32px;
+	height: 32px;
+	text-align: center;
+	line-height: 32px;
+	color: #438bca;
+	background-color: #fff;
+	text-decoration: none;
+	border: 1px solid #ccc;
+}
+#eventslistbox ul.page li:first-child a{
+	border-radius: 5px 0px 0px 5px;
+	font-size: 12px;
+}
+#eventslistbox ul.page li:last-child a{
+	border-radius:  0px 5px 5px 0px ;
+	font-size: 12px;
+}
+#eventslistbox ul.page li a.active{
+	color: #fff;
+	background-color: #438bca;
+}
+
+#eventslistbox ul.page li:first-child span{
+	border-radius: 5px 0px 0px 5px;
+	font-size: 12px;
+}
+#eventslistbox ul.page li:last-child span{
+	border-radius:  0px 5px 5px 0px ;
+	font-size: 12px;
+}
+#eventslistbox ul.page li span.active{
+	color: #fff;
+	background-color: #438bca;
+}
+/* ======================================= */
+#eventbox{
+	width: auto;
+	min-height: 460px;
+	height: auto;
+	padding: 40px 75px 50px 120px;
+}
+#eventbox .subjectbox{
+	width: 940px;
+	min-height: 80px;
+	border: 1px solid #ccc;
+	font-size: 36px;
+	font-weight: bold;
+	line-height: 1.2em;
+	box-shadow: 5px 5px 5px 0 #ddd;
+	padding: 5px;
+	margin-bottom: 45px;
+}
+#eventbox .subjectbox p.date{
+	font-size: 30px;
+	color: #66794c;
+}
+#eventbox .photobox{
+	width: 950px;
+	height: 470px;
+	background-color: #eee;
+	margin-bottom: 35px;
+}
+#eventbox a.addevent{
+	display: table;
+	width: 215px;
+	height: 57px;
+	text-align: center;
+	line-height: 57px;
+	background-color: #8cc63f;
+	color: #fff;
+	box-shadow:  3px 3px 0px 0 #3a521a;
+	border-radius: 10px;
+	font-size: 24px;
+	text-decoration: none;
+	margin: 0 auto;
+	text-shadow:  1px 1px 3px #3a521a;
+	margin-bottom: 45px;
+}
+#eventbox .contentbox{
+	width: 950px;
+	min-height: 600px;
+	height: auto;
+	margin-bottom: 35px;
+}
+#eventbox .contentbox div.llbox{
+	float: left;
+	width: 580px;
+	min-height: 600px;
+	height: 600px;
+	padding: 20px;
+	overflow-y: scroll;
+}
+#eventbox .contentbox div.rrbox{
+	margin-left: 620px;
+	width: auto;
+	min-height: 600px;
+	height: auto;
+	padding: 20px 0px 20px 20px;
+}
+#eventbox .contentbox div.infobox{
+	min-width: 310px;
+	min-height: 120px;
+	margin: 0 0 10px 0;
+	padding: 0;
+	background: #f3f3f3;
+}
+#eventbox .contentbox div.mapbox{
+	min-width: 310px;
+	min-height: 310px;
+	margin: 0;
+	padding: 0;
+}
+#eventbox .msgbox{
+	width: 100%;
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	color:#8cc63f;
+	line-height: 1.5em;
+
+}
+/* ======================================= */
+.noticesbox{
+	width: auto;
+	min-height: 460px;
+	height: auto;
+	padding: 0px 0px 0px 13px;
+}
+.noticesbox div.item{
+	display: table;
+	margin-bottom: 25px;
+}
+.noticesbox div.item div.photobox{
+	float: left;
+	width: 152px;
+	height: 152px;
+}
+.noticesbox div.item div.infobox{
+	float: left;
+	width: 550px;
+	height: 142px;
+	padding-left: 25px;
+	padding-top: 10px;
+}
+.noticesbox div.item div.btnbox{
+	margin-left: 727px;
+	width: 75px;
+	height: 142px;
+	padding-top: 10px;
+}
+.noticesbox div.item div.infobox p.date1{
+	font-size: 18px;
+	color: #999;
+	line-height: 1.5em;
+}
+.noticesbox div.item div.infobox p.title{
+	font-size: 24px;
+	color: #333;
+	line-height: 1.5em;
+}
+.noticesbox div.item div.infobox p.name{
+	font-size: 16px;
+	color: #333;
+	line-height: 1.5em;
+}
+.noticesbox div.item div.infobox p.name a{
+	color:#7ab9ff;
+}
+.noticesbox div.item div.infobox p.date2{
+	font-size: 16px;
+	color: #333;
+	line-height: 1.5em;
+}
+.noticesbox div.item div.infobox p.location{
+	font-size: 16px;
+	color: #333;
+	line-height: 1.5em;
+}
+.noticesbox div.item div.btnbox .attend{
+	display: block;
+	width: 66px;
+	height: 38px;
+	text-align: center;
+	margin-bottom: 10px;
+	color: #fff;
+	background-color: #72a330;
+	line-height: 38px;
+	text-decoration: none;
+}
+.noticesbox div.item div.btnbox .declined{
+	display: block;
+	width: 66px;
+	height: 38px;
+	text-align: center;
+	margin-bottom: 10px;
+	color: #fff;
+	background-color: #a6a6a6;
+	line-height: 38px;
+	text-decoration: none;
+}
+.noticesbox div.item div.btnbox .reply{
+	display: block;
+	width: 66px;
+	height: 38px;
+	text-align: center;
+	margin-bottom: 10px;
+	color: #fff;
+	background-color: #f07700;
+	line-height: 38px;
+	text-decoration: none;
+}
+/* ======================================= */
+#vacanciesbox{
+	width: auto;
+	min-height: 460px;
+	height: auto;
+	padding: 35px 0px 0px 30px;
+}
+#vacanciesbox p.company{
+	font-size: 24px;
+	color: #333;
+	line-height: 1.5em;	
+}
+#vacanciesbox p.vacancies{
+	font-size: 24px;
+	color: #999;
+	line-height: 1.5em;	
+	margin-bottom: 40px;
+}
+#vacanciesbox p.desc{
+	font-size: 18px;
+	color: #333;
+	line-height: 1.5em;	
+}
+#vacanciesbox a.dropresume{
+	display: block;
+	width: 215px;
+	height: 57px;
+	text-align: center;
+	line-height: 57px;
+	background-color: #8cc63f;
+	color: #fff;
+	box-shadow:  3px 3px 0px 0 #3a521a;
+	border-radius: 10px;
+	font-size: 24px;
+	text-decoration: none;
+	margin: 0 auto;
+	text-shadow:  1px 1px 3px #3a521a;	
+}
+/* ======================================= */
+#indexbox div.bigitem{
+	float: left;
+	width: 275px;
+	min-height: 350px;
+	background-color: #f3f3f3;
+	border-bottom: solid #a59b9b 3px;
+	margin-bottom: 10px;
+	margin-right: 8px;
+}
+
+#indexbox div.bigitem:last-child{
+	margin-right: 0px;	
+}
+#indexbox div.bigitem div.imgbox{
+	display: inline-block;
+	overflow: hidden;
+	width: 275px;
+	height: 185px;
+}
+#indexbox div.bigitem p.title{
+	display: block;
+	width: 95%;
+	margin: 0 auto;
+	font-size: 16px;
+	line-height: 24px;
+	color: #758c57;
+}
+#indexbox div.bigitem p.desc{
+	display: block;
+	width: 95%;
+	margin: 0 auto;
+	font-size: 16px;
+	line-height: 24px;
+	color: #777;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#indexbox div.item{
+	float: left;
+	width: 202px;
+	min-height: 265px;
+	background-color: #f3f3f3;
+	border-bottom: solid #a59b9b 3px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+#indexbox div.item:last-child{
+	margin-right: 0px;	
+}
+#indexbox div.item div.imgbox{
+	display: inline-block;
+	overflow: hidden;
+	width: 205px;
+	height: 206px;
+}
+#indexbox div.item p.title{
+	display: block;
+	width: 95%;
+	margin: 0 auto;
+	font-size: 16px;
+	line-height: 24px;
+	color: #000;
+}
+#indexbox div.item p.date{
+	display: block;
+	width: 95%;
+	margin: 0 auto;
+	font-size: 18px;
+	line-height: 24px;
+	color: #777;
+}
+#indexbox div.item p.jobname{
+	display: block;
+	width: 95%;
+	margin: 0 auto;
+	font-size: 18px;
+	line-height: 24px;
+	color: #777;
+}
+#indexbox p.line{
+	display: table;
+	width: 845px;
+	height:0px;
+	border-top: 3px solid #eee;
+	margin-bottom: 30px;
+}
+#indexbox a.morebtn{
+	display: table;
+	width: 125px;
+	height: 35px;
+	line-height: 35px;
+	background-color: #ddd;
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	text-decoration: none;
+	margin-left: 715px;
+	margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/* ======================================= */
+#fbbox{
+	width: 1137px;
+	height: 290px;
+	margin: 0 auto;
+}
+
+#footerbox{
+	height: 118px;
+}
+#footernavbox{
+	width: 100%;
+	height: 77px;
+	background-color: #525252;
+	color: #fff;
+}
+#footerinfobox{
+	width: 100%;
+	height: 41px;
+	background-color: #262626;
+	color: #fff;
+}
+#footernavbox .nav{
+	width: 1137px;
+	margin: 0 auto;
+}
+#footerinfobox .info{
+	width: 1137px;
+	margin: 0 auto;
+}
+
+#footernavbox .nav ul{margin-left: 112px;}
+#footernavbox .nav ul li{
+	float: left;
+	margin: 0 50px 0 0;
+}
+#footernavbox .nav ul li a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 16px;
+	line-height: 77px;
+}
+#footerinfobox .info .l{
+	float: left;
+	width: 482px;
+	height: 41px;
+	line-height: 41px;
+	color: #fff;
+	margin-left:112px; 
+	font-size: 12px;
+}
+#footerinfobox .info .r{
+	line-height: 41px;
+	color: #fff;
+	margin-left: 594px;
+	font-size: 12px;
+}
+/* ======================================= */

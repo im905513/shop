@@ -1,0 +1,257 @@
+div#logindatabox{
+	position: fixed;
+	top:0px;
+	left: 0px;
+	display: none;
+	width: 653px;
+	height: 441px;
+	padding: 10px 10px 15px 10px;
+	border: solid 1px #ccc;
+	background: #fff;
+}
+
+div#logindatabox div.close{
+	position: absolute;
+	top:5px;
+	right: 10px;
+	width: 22px;
+	height: 22px;
+	background: url("../images/icon/close.png");
+	cursor: pointer;
+}
+
+div#logindatabox div.subject{
+	line-height: 50px;
+	font-size: 24px;
+	color: #535353;
+
+}
+
+div#logindatabox div.line{
+	width: 100%;
+	height:2px;
+	background: #ccc; 
+}
+
+div#logindatabox div.account{
+	clear: both;
+	width: 100%;
+	height: 33px;
+	line-height: 33px;
+	margin-bottom: 10px;
+}
+
+div#logindatabox div.account div.title{
+	float: left;
+	width: 99px;
+	height: 33px;
+	line-height: 33px;
+	padding: 0 25px 0 0;
+	text-align: right;
+}
+
+div#logindatabox div.account div.input{
+	float: left;
+	width: 407px;
+	height: 33px;
+	line-height: 33px;
+}
+
+div#logindatabox div.account div.input input{
+	width: 403px;
+	height: 27px;
+	line-height: 30px;
+}
+
+div#logindatabox div.account div.icon{
+	float: left;
+	min-width: 120px;
+	max-width: 122px;
+	height: 33px;
+	line-height: 33px;
+}
+
+div#logindatabox div.account div.icon div.ok{
+	width: 44px;
+	height: 33px;
+	background: url("../images/icon/ok.png");
+}
+
+div#logindatabox div.password{
+	clear: both;
+	width: 100%;
+	height: 33px;
+	line-height: 33px;
+	margin-bottom: 10px;
+}
+
+div#logindatabox div.password div.title{
+	float: left;
+	width: 99px;
+	height: 33px;
+	line-height: 33px;
+	padding: 0 25px 0 0;
+	text-align: right;
+}
+
+div#logindatabox div.password div.input{
+	float: left;
+	width: 407px;
+	height: 33px;
+	line-height: 33px;
+}
+
+div#logindatabox div.password div.input input{
+	width: 403px;
+	height: 27px;
+	line-height: 30px;
+}
+
+div#logindatabox div.password div.icon{
+	float: left;
+	min-width: 120px;
+	max-width: 122px;
+	height: 33px;
+	line-height: 33px;
+}
+
+div#logindatabox div.password div.icon div.ok{
+	width: 44px;
+	height: 33px;
+	background: url("../images/icon/ok.png");
+}
+
+
+div#logindatabox div.confirmpassword{
+	clear: both;
+	width: 100%;
+	height: 33px;
+	line-height: 33px;
+	margin-bottom: 10px;
+}
+
+div#logindatabox div.confirmpassword div.title{
+	float: left;
+	width: 99px;
+	height: 33px;
+	line-height: 33px;
+	padding: 0 25px 0 0;
+	text-align: right;
+}
+
+div#logindatabox div.confirmpassword div.input{
+	float: left;
+	width: 407px;
+	height: 33px;
+	line-height: 33px;
+}
+
+div#logindatabox div.confirmpassword div.input input{
+	width: 403px;
+	height: 27px;
+	line-height: 30px;
+}
+
+div#logindatabox div.confirmpassword div.icon{
+	float: left;
+	min-width: 120px;
+	max-width: 122px;
+	height: 33px;
+	line-height: 33px;
+}
+
+div#logindatabox div.confirmpassword div.icon div.ok{
+	width: 44px;
+	height: 33px;
+	background: url("../images/icon/ok.png");
+}
+
+div#logindatabox div.agree{
+	width: auto;
+	height: 20px;
+	text-align: right;
+	padding: 0 125px 0 0;
+	margin: 0 0 10px 0;
+}
+
+div#logindatabox div.agree input{
+	float: right;
+	width: 20px;
+	height: 20px;
+	line-height: 21px;
+}
+
+div#logindatabox div.agree p{
+	float: right;
+	line-height: 21px;
+}
+
+div#logindatabox div.agree p a{
+	color: #535353;
+}
+
+div#logindatabox div.submit{
+	clear: both;
+	text-align: right;
+	padding: 0 125px 0 0; 
+	margin: 0 0 20px 0;
+}
+div#logindatabox div.submit input{
+	border-radius: 5px;
+	color: #fff;
+	font-size: 18px;
+	padding: 5px 15px 5px 15px;
+	text-align: center;
+	background: #8cc63f;
+	border:1px solid #ccc ;
+	line-height: 21px;	
+	cursor: pointer;
+}
+
+div#logindatabox div.fbbox{
+	clear: both;
+	text-align: right;
+	padding: 0 0 0 60px; 
+	font-size: 18px;
+}
+
+div#logindatabox div.fbbox p{
+	float: left;
+	line-height: 41px;
+	color: #999;
+}
+
+div#logindatabox div.fbbox div{
+	float: left;
+	cursor: pointer;
+}
+
+#myinfobox{
+	position: absolute;
+	top: 30px; 
+	left: 989px;
+	min-width: 26px;
+	width: auto;
+	height: 17px;
+	line-height: 17px;
+	background: url("../images/icon/login.png");	
+	background-repeat: no-repeat;
+	color: #525252;
+	padding: 0 0 0 30px;
+	cursor: pointer;
+}
+#logout{
+	position: absolute;
+	top: 30px; 
+	left: 1030px;
+	min-width: 26px;
+	width: auto;
+	height: 17px;
+	line-height: 17px;
+	background: url("../images/icon/logout.png");	
+	background-repeat: no-repeat;
+	color: #525252;
+	padding: 0 0 0 30px;
+	cursor: pointer;
+}
+

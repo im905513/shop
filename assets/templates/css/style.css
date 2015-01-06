@@ -1,0 +1,453 @@
+body {
+	font-family: "微軟正黑體","Helvetica"; 
+	color: #666666;
+	background-color:#ffffff;
+}
+
+#maincontain{
+	width:100%;
+	height: auto;
+	background: url("../images/bg/bg01.jpg");
+	background-repeat: repeat-x;
+}
+
+#contentbox{
+	width: 1100px;
+	min-height: 600px;
+	height: auto;
+	margin: 0 auto;
+}
+
+#footerbox{
+	width: 100%;
+	height: 109px;
+	background: #525252;
+}
+
+#headerbox{
+	position: relative;
+	width:1110px;
+	height: 515px;
+	background: url("../images/banner/banner01.jpg");
+}
+
+#bodybox01{
+	position: relative;
+	width:1110px;
+	min-height: 317px;
+}
+
+#bodybox01 div.top{
+	width: 990px;
+	height: 120px;
+	margin: 0 auto;
+}
+
+#bodybox01 div.bottom{
+	width: 990px;
+	min-height: 197px;
+	margin: 0 auto;
+}
+
+#bodybox01 div.top ul{}
+#bodybox01 div.top ul li{float: left;height: 120px;}
+#bodybox01 div.top ul li.subject{
+	width: 138px;
+	padding: 0 25px 0 0;
+	text-align: right;
+	color: #666;
+	font-size: 18px;
+	line-height: 120px;
+}
+
+#bodybox01 div.bottom h2{
+	font-size: 52px;
+	font-weight: normal;
+	color: #666;
+	line-height: 78px;
+	text-align: center;
+}
+
+
+#bodybox01 div.bottom p{
+	font-size: 18px;
+	font-weight: normal;
+	color: #666;
+	line-height: 30px;
+	text-align: justify;
+}
+
+#bodybox02{
+	position: relative;
+	width:1110px;
+	height: 442px;
+}
+
+#bodybox03{
+	position: relative;
+	width:1110px;
+	height: 279px;
+}
+
+#bodybox04{
+	position: relative;
+	width:1110px;
+	height: 339px;
+	background: url("../images/pic/pic3.png");
+}
+
+#bodybox04 p.subject{
+	position: absolute;
+	top: 80px;
+	left: 475px;
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 30px;
+	color: #525252;
+	letter-spacing: 1px;
+}
+
+#bodybox04 p.content{
+	position: absolute;
+	top: 146px;
+	left: 475px;
+	width: 530px;
+	height: auto;
+	font-weight: normal;  
+	font-size: 18px;
+	line-height: 28px;
+	color: #525252;
+}
+
+#bodybox05{
+	position: relative;
+	width:1110px;
+	height: 275px;
+	background: url("../images/pic/pic4.png");
+}
+
+#bodybox05 p.subject{
+	position: absolute;
+	top: 67px;
+	left: 56px;
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 30px;
+	color: #525252;
+	letter-spacing: 1px;
+}
+
+#bodybox05 p.content{
+	position: absolute;
+	top: 115px;
+	left: 56px;
+	width: 455px;
+	height: auto;
+	font-weight: normal;  
+	font-size: 18px;
+	line-height: 28px;
+	color: #525252;
+}
+
+#bodybox06{
+	position: relative;
+	width:1110px;
+	height: 317px;
+}
+
+#headerbox a.logo{
+	position: absolute;
+	display: block;
+	top: 15px;
+	left: 57px;
+	width:214px;
+	height: 43px;
+	background: url("../images/logo/logo.png");
+}
+
+#headerbox ul.menu{position: absolute;top: 15px; left: 650px;}
+#headerbox ul.menu li{float: left;}
+#headerbox ul.menu li a{
+	margin: 0 23px 0 23px;
+	line-height: 46px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #666;
+	text-decoration: none;
+}
+
+#loginbox{
+	position: absolute;
+	top: 30px; 
+	left: 989px;
+	min-width: 26px;
+	width: auto;
+	height: 17px;
+	line-height: 17px;
+	background: url("../images/icon/login.png");	
+	background-repeat: no-repeat;
+	color: #666;
+	padding: 0 0 0 30px;
+	cursor: pointer;
+}
+
+#logdata{
+	position: absolute;
+	top: 360px; 
+	left: 73px;
+	width: 276px;
+	height: 65px;
+	background: url("../images/icon/logdata.png");	
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+#headerbox div.fb {
+	position: absolute;
+	top: 450px; 
+	left: 73px;
+	min-width: 386px;
+	width: auto;
+	height: 30px;
+	background: url("../images/icon/fb01.png");
+	background-repeat: no-repeat;
+}
+
+#footernavbox{
+	width: 100%;
+	height: 77px;
+	background: #525252;
+}
+
+
+#footerinfobox{
+	clear: both;
+	width: 100%;
+	height: 32px;
+	background: #262626;
+}
+
+#footernavbox div.nav{
+	width: 1100px;
+	height: 77px;
+	margin: 0 auto;
+}
+
+#footernavbox div.nav ul{float: right;}
+#footernavbox div.nav ul li{float: left;}
+#footernavbox div.nav ul li a{
+	margin: 0 13px 0 13px;
+	padding: 0;
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 77px;
+}
+
+#footerinfobox div.info{
+	width: 1100px;
+	height: 32px;
+	margin: 0 auto;
+}
+
+#footerinfobox div.info div.l{
+	float: left;
+	width: 495px;
+	height: 32px;
+	padding: 0 0 0 55px;
+	line-height: 32px;
+	color: #fff;
+	font-size: 12px;
+}
+
+#footerinfobox div.info div.r{
+	margin: 0 0 0 550px;
+	width: 550px;
+	height: 32px;
+	line-height: 32px;
+	color: #fff;
+	text-align: right;
+	font-size: 12px;
+}
+/*-------------------*/
+div#wall{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0);
+}
+
+/*-------------------*/
+div#logindialog{
+	position: fixed;
+	top:0px;
+	left: 0px;
+	display: none;
+	width: 653px;
+	height: 441px;
+	padding: 10px 10px 15px 10px;
+	border: solid 1px #ccc;
+	background: #fff;
+}
+
+div#logindialog div.close{
+	position: absolute;
+	top:5px;
+	right: 10px;
+	width: 22px;
+	height: 22px;
+	background: url("../images/icon/close.png");
+	cursor: pointer;
+}
+
+div#logindialog div.subject{
+	line-height: 50px;
+	font-size: 24px;
+	color: #535353;
+
+}
+
+div#logindialog div.line{
+	width: 100%;
+	height:2px;
+	background: #ccc; 
+	margin-bottom: 105px;
+}
+
+div#logindialog div.account{
+	clear: both;
+	width: 100%;
+	height: 33px;
+	line-height: 33px;
+	margin-bottom: 10px;
+}
+
+div#logindialog div.account div.title{
+	float: left;
+	width: 99px;
+	height: 33px;
+	line-height: 33px;
+	padding: 0 25px 0 0;
+	text-align: right;
+}
+
+div#logindialog div.account div.input{
+	float: left;
+	width: 407px;
+	height: 33px;
+	line-height: 33px;
+}
+
+div#logindialog div.account div.input input{
+	width: 403px;
+	height: 27px;
+	line-height: 30px;
+}
+
+div#logindialog div.account div.icon{
+	float: left;
+	min-width: 120px;
+	max-width: 122px;
+	height: 33px;
+	line-height: 33px;
+}
+
+div#logindialog div.account div.icon div.ok{
+	width: 44px;
+	height: 33px;
+}
+
+div#logindialog div.password{
+	clear: both;
+	width: 100%;
+	height: 33px;
+	line-height: 33px;
+	margin-bottom: 10px;
+}
+
+div#logindialog div.password div.title{
+	float: left;
+	width: 99px;
+	height: 33px;
+	line-height: 33px;
+	padding: 0 25px 0 0;
+	text-align: right;
+}
+
+div#logindialog div.password div.input{
+	float: left;
+	width: 407px;
+	height: 33px;
+	line-height: 33px;
+}
+
+div#logindialog div.password div.input input{
+	width: 403px;
+	height: 27px;
+	line-height: 30px;
+}
+
+div#logindialog div.password div.icon{
+	float: left;
+	min-width: 120px;
+	max-width: 122px;
+	height: 33px;
+	line-height: 33px;
+}
+
+div#logindialog div.password div.icon div.ok{
+	width: 44px;
+	height: 33px;
+}
+
+div#logindialog div.submit{
+	clear: both;
+	text-align: right;
+	padding: 0 125px 0 0; 
+	margin: 0 0 90px 0;
+
+}
+div#logindialog div.submit input{
+	border-radius: 5px;
+	color: #fff;
+	font-size: 18px;
+	padding: 5px 15px 5px 15px;
+	text-align: center;
+	background: #8cc63f;
+	border:1px solid #ccc ;
+	line-height: 21px;	
+	cursor: pointer;
+}
+
+div#logindialog div.fbbox{
+	clear: both;
+	text-align: right;
+	padding: 0 0 0 60px; 
+	font-size: 18px;
+}
+
+div#logindialog div.fbbox p{
+	float: left;
+	line-height: 41px;
+	color: #999;
+}
+
+div#logindialog div.fbbox div{
+	float: left;
+	cursor: pointer;
+}
+
+/*-------------------*/
+
+
+br.CLEAR{ clear:both; font-size:1px; height:1px; line-height:1px;}
+/*----------消虛線---------*/
+/* For IE, onFocus 的 F 要大寫*/
+a{noFocusline:expression(this.onFocus=this.blur());}     
+/* For Firefox */
+a:focus{<br />	-moz-outline-style:none;}  
+

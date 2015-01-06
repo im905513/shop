@@ -1,0 +1,121 @@
+body {
+	font-family: "微軟正黑體、新細明體、細明體、Arial";
+	color: #666666;
+	background-color:#ffffff;
+}
+
+#maincontain{
+	width:100%;
+	height: auto;	
+	padding: 140px 0 0 0;
+}
+
+#header{
+	position: fixed;
+	top:0px;
+	left: 0px;
+	width: 100%;
+	height: 70px;
+	background: #8cc63f;
+}
+
+#logo{
+	position: absolute;
+	top:12px;
+	left: 12px;
+	width: 256px;
+	height: 46px;
+	background: url("../images/logo/logo.png");
+}
+
+#menu{
+	position: fixed;
+	top:70px;
+	left: 0px;
+	width: 100%;
+	height: 70px;
+	background: #525252;
+}
+
+#menu ul{
+
+}
+
+#menu ul li{
+	float: left;
+	width: 25%;
+	height: 70px;
+	text-align: center;
+}
+
+#menu ul li a{
+	font-size: 36px;
+	line-height: 70px;
+	color: #fff;
+	text-decoration: none;
+}
+
+#textbox{
+	width: 550px;
+	height: auto;
+	padding: 80px 25px 20px 25px; 	
+	margin: 0 auto;
+}
+
+#textbox .ok{
+	width: 117px;
+	height: 126px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+#textbox .txt1{
+	font-size: 63px;
+	text-align: center;
+	line-height: 80px;
+	margin-bottom: 50px;
+}
+
+#textbox .txt2{
+	font-size: 32px;
+	text-align: center;
+	line-height: 50px;
+	margin-bottom: 30px;
+}
+
+#textbox .txt3{
+	font-size: 24px;
+	text-align: center;
+	line-height: 30px;
+	margin-bottom: 130px;
+}
+
+#footer{
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 110px;
+	color: #fff;
+	background: #262626;
+}
+
+#footer .txt{
+	width: 570px;
+	height: 90px;
+	color: #fff;
+	line-height: 36px;
+	font-size: 18px;
+	margin: 0 auto;
+	padding: 20px 0 0 0;
+	letter-spacing: 0px;
+}
+
+
+br.CLEAR{ clear:both; font-size:1px; height:1px; line-height:1px;}
+/*----------消虛線---------*/
+/* For IE, onFocus 的 F 要大寫*/
+a{noFocusline:expression(this.onFocus=this.blur());}     
+/* For Firefox */
+a:focus{<br />	-moz-outline-style:none;}  
+
