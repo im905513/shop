@@ -56,8 +56,8 @@ class Order_manage extends Fuel_base_controller {
 		$vars['page_jump'] = $this->pagination->create_links();
 
 
-		$vars['edit_url'] 			= $base_url.'fuel/order/edit?pro_id=';
-		$vars['del_url'] 			= $base_url.'fuel/order/del?pro_id=';
+		$vars['detail_url'] 		= $base_url.'fuel/order/detail?order_id=';
+		$vars['del_url'] 			= $base_url.'fuel/order/del?order_id=';
 		$vars['multi_del_url'] 		= $base_url.'fuel/order/do_multi_del';
 		$vars['results'] 			= $results;
 		$vars['total_rows'] 		= $total_rows;
@@ -67,7 +67,232 @@ class Order_manage extends Fuel_base_controller {
 
 		$this->fuel->admin->render('_admin/order_lists_view', $vars);
 
+	}
+
+	function detail()
+	{
+		$module_uri = base_url().$this->module_uri;
+		$order_id = $this->input->get("order_id");
+
+		if($order_id)
+		{
+			$content_result = $this->order_manage_model->get_order_detail($order_id);
+			$detail_result = $this->order_manage_model->get_order_pro_detail($order_id);
+
+			if(empty($content_result))
+			{
+				$this->plu_redirect($module_uri, 0, "查無此訂單");
+				die();
+			}
+		}
+		else
+		{
+			$this->plu_redirect($module_uri, 0, "查無此訂單");
+			die();
+		}
+
+
+		$vars['form_action'] = base_url().'fuel/product/do_edit?order_id='.$order_id;
+		$vars['form_method'] = 'POST';
+		$crumbs = array($this->module_uri => $this->module_name);
+		$this->fuel->admin->set_titlebar($crumbs);	
+ 
+	 
+
+		$vars['module_uri'] 			= base_url().$this->module_uri;
+		$vars['edit_url'] 				= base_url().'fuel/order/edit?order_id='.$order_id;
+		$vars["content_result"] 		= $content_result;
+		$vars["detail_result"] 			= $detail_result;
+		$vars['del_detail_url'] 		= base_url().'fuel/order/detail/del/';
+		$vars['set_order_status_url']	= base_url().'fuel/order/set/order_status/';
+		$vars["view_name"] 				= "訂單資訊";
+		$this->fuel->admin->render('_admin/order_detail_view', $vars);
+	}
+
+	function edit()
+	{
+		$module_uri = base_url().$this->module_uri;
+		$order_id = $this->input->get("order_id");
+
+		if($order_id)
+		{
+			$content_result = $this->order_manage_model->get_order_detail($order_id);
+			$detail_result = $this->order_manage_model->get_order_pro_detail($order_id);
+
+			if(empty($content_result))
+			{
+				$this->plu_redirect($module_uri, 0, "查無此訂單");
+				die();
+			}
+		}
+		else
+		{
+			$this->plu_redirect($module_uri, 0, "查無此訂單");
+			die();
+		}
+
+
+		$vars['form_action'] = base_url().'fuel/order/do_edit?order_id='.$order_id;
+		$vars['form_method'] = 'POST';
+		$crumbs = array($this->module_uri => $this->module_name);
+		$this->fuel->admin->set_titlebar($crumbs);	
+ 
+	 
+
+		$vars['module_uri'] 			= base_url().$this->module_uri;
+		$vars["content_result"] 		= $content_result;
+		$vars["detail_result"] 			= $detail_result;
+		$vars['del_detail_url'] 		= base_url().'fuel/order/detail/del/';
+		$vars["view_name"] 				= "訂單資訊";
+		$this->fuel->admin->render('_admin/order_edit_view', $vars);
+	}
+
+function do_edit()
+	{
+		$base_url = base_url();
+		$module_uri = base_url().$this->module_uri;
+		$order_id = $this->input->get("order_id");
+
+		$insert_data = array();
+		$insert_data['order_vat_number']			= $this->input->get_post("order_vat_number");
+		$insert_data['order_invoice_title']			= $this->input->get_post("order_invoice_title");
+		$insert_data['order_addressee_name']		= $this->input->get_post("order_addressee_name");
+		$insert_data['order_addressee_mobile']		= $this->input->get_post("order_addressee_mobile");
+		$insert_data['order_addressee_addr']		= $this->input->get_post("order_addressee_addr");
+		$insert_data['order_note']					= $this->input->get_post("order_note");
+		$insert_data['order_status']				= $this->input->get_post("order_status");
+		$insert_data['order_ship_status']			= $this->input->get_post("order_ship_status");
+		$insert_data['order_inv_status']			= $this->input->get_post("order_inv_status");
+
+		$success = $this->order_manage_model->modify($insert_data, $order_id);
+		
+		if($success)
+		{
+			$this->plu_redirect($base_url.'fuel/order/detail?order_id='.$order_id, 0, "修改成功");
+			die();
+		}
+		else
+		{
+			$this->plu_redirect($base_url.'fuel/order/detail?order_id='.$order_id, 0, "修改失敗");
+			die();
+		}
+		return;
 	} 
+
+	function do_del_detail_item($did)
+	{
+		$response = array();
+
+		if(!empty($did))
+		{
+			$success = $this->order_manage_model->del_detail_item($did);
+
+			if($success)
+			{
+				$response['status'] = 1;
+			}
+			else
+			{
+				$response['status'] = -1;
+			}
+		}
+		else
+		{
+			$response['status']	= -1;
+		}
+
+		echo json_encode($response);
+	}
+
+	function set_order_status($order_id, $status)
+	{
+		$module_uri = base_url().$this->module_uri;
+		if(!empty($order_id) && !empty($status))
+		{
+			$success = $this->order_manage_model->set_order_status($order_id, $status);
+
+			if($success)
+			{
+				$this->plu_redirect($module_uri, 0, "更新成功");
+				die();
+			}
+			else
+			{
+				$this->plu_redirect($module_uri, 0, "更新失敗");
+				die();
+			}
+			return;
+		}
+		else
+		{
+			$this->plu_redirect($module_uri, 0, "更新失敗");
+			die();
+		}
+
+		return;
+	}
+
+	function do_del()
+	{
+		$order_id = $this->input->get("order_id");
+		$response = array();
+		if(!empty($order_id))
+		{
+			$success = $this->order_manage_model->del($order_id);
+
+			if($success)
+			{
+				$response['status'] = 1;
+			}
+			else
+			{
+				$response['status'] = -1;
+			}
+		}
+		else
+		{
+			$response['status'] = -1;
+		}
+
+		echo json_encode($response);
+	}
+
+	function do_multi_del()
+	{
+		$order_ids = $this->input->get_post("orderids");
+		$response = array();
+
+		if(!empty($order_ids))
+		{
+			if(is_array($order_ids))
+			{
+				$ids = implode(",", $order_ids);
+				$success = $this->order_manage_model->multi_del($ids);
+
+				if($success)
+				{
+					$response['status']	= 1;
+				}
+				else
+				{
+					$response['status']	= -1;
+				}
+			}
+			else
+			{
+				$response['status']	= -1;
+			}
+
+		}
+		else
+		{
+			$response['status']	= -1;
+		}
+
+		echo json_encode($response);
+
+		return;
+	}
 
 
 	function export_excel(){

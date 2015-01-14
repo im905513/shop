@@ -85,20 +85,21 @@
 						<th>訂購人</th>
 						<th>訂單狀態</th>
 						<th>運送狀態</th>
+						<th>訂購日期</th>
 						<th>刪除</th>
 					</tr>
 				</thead>
 				<tbody>
-				<?php if(isset($result)):?>
-					<?php foreach($result as $row):?>
-						<tr>
+				<?php if(isset($results)):?>
+					<?php foreach($results as $row):?>
+						<tr id="oid_<?php echo $row->id?>">
 							<td>
 								<label class="label_check c_on" for="checkbox-01">
 									<input type="checkbox" name="order_id[]" orderid="<?php echo $row->id?>"/>
 								</label>
 							</td>
 							<td>
-								<a href="#"><?php echo $row->id?></a>
+								<a href="<?php echo $detail_url.$row->id?>"><?php echo $row->id?></a>
 							</td>
 							<td>
 								<?php echo $row->member_name;?>
@@ -121,6 +122,7 @@
 									未知狀態
 								<?php endif;?>
 							</td>
+							<td><?php echo $row->order_time;?></td>
 							<td>
 								<button class="btn btn-xs btn-danger del" type="button" OrderID="<?php echo $row->id?>">刪除</button>
 							</td>
@@ -196,13 +198,13 @@
 		$j(".del").on("click", function(){
 			$j(".do-del").show();
 			$j(".do-del-all").hide();
-			$j(".do-del").attr("EventID", $(this).attr("EventID"));
+			$j(".do-del").attr("OrderID", $(this).attr("OrderID"));
 			$j('#myModal').modal('toggle');
 		});
 
 		$j(".do-del").on("click", function(){
-			var	 api_url = '' + $(this).attr("EventID");
-		   
+			var	api_url = '<?php echo $del_url;?>' + $(this).attr("OrderID");
+			var oid = $(this).attr("OrderID");
 			$j.ajax({
 				url: api_url,
 				type: 'POST',
@@ -219,7 +221,8 @@
 						$j(".notify .alert").removeClass('alert-danger');
 						$j(".notify .alert").addClass('alert-success');
 						$j(".notify").fadeIn(100).fadeOut(1000);
-						setTimeout("update_page()", 500);
+						$j("#oid_" + oid ).fadeOut(1000, function(){$(this).remove();});
+						//setTimeout("update_page()", 500);
 					}
 					else
 					{
@@ -238,13 +241,13 @@
 
 		   if($j("#select-all").prop("checked"))
 		   {
-				$j("input[name='pro_id[]']").each(function() {
+				$j("input[name='order_id[]']").each(function() {
 					$j(this).prop("checked", true);
 				});
 		   }
 		   else
 		   {
-				$j("input[name='pro_id[]']").each(function() {
+				$j("input[name='order_id[]']").each(function() {
 					$j(this).prop("checked", false);
 				});     
 		   }
@@ -258,14 +261,14 @@
 
 		$j(".do-del-all").on("click", function(){
 
-			var eventid = [];
+			var orderid = [];
 			var j = 0;
 			var postData = {};
-			var api_url = '';
-			$j("input[name='pro_id[]']").each(function(i){
+			var api_url = '<?php echo $multi_del_url?>';
+			$j("input[name='order_id[]']").each(function(i){
 				if($j(this).prop("checked"))
 				{
-					eventid[j] = $j(this).attr('eventid');
+					orderid[j] = $j(this).attr('orderid');
 					j++;
 				}
 			});
@@ -276,7 +279,7 @@
 				return false;
 			}
 
-			postData = {'eventids': eventid};
+			postData = {'orderids': orderid};
 			$j.ajax({
 				url: api_url,
 				type: 'POST',
