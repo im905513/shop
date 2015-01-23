@@ -62,7 +62,8 @@ class Order_manage extends Fuel_base_controller {
 		$vars['results'] 			= $results;
 		$vars['total_rows'] 		= $total_rows;
 		$vars['search_url'] 		= $base_url.'fuel/order/lists';
-		$vars['export_url']			= base_url().'fuel/order/export_excel';/**/
+		$vars['export_url']			= $base_url.'fuel/order/export_excel';/**/
+		$vars['batch_url']			= $base_url.'fuel/order/update/status';
 		$vars['CI'] = & get_instance();
 
 		$this->fuel->admin->render('_admin/order_lists_view', $vars);
@@ -294,6 +295,44 @@ function do_edit()
 		return;
 	}
 
+	function do_update_order_status()
+	{
+		$order_ids = $this->input->get_post("orderids");
+		$order_status = $this->input->get_post("order_status");
+
+		$response = array();
+
+		if(!empty($order_ids))
+		{
+			if(is_array($order_ids))
+			{
+				$ids = implode(",", $order_ids);
+				$success = $this->order_manage_model->multi_update_status($ids, $order_status);
+
+				if($success)
+				{
+					$response['status']	= 1;
+				}
+				else
+				{
+					$response['status']	= -1;
+				}
+			}
+			else
+			{
+				$response['status']	= -1;
+			}
+
+		}
+		else
+		{
+			$response['status']	= -1;
+		}
+
+		echo json_encode($response);
+
+		return;
+	}
 
 	function export_excel(){
 		$this->load->library('excel');

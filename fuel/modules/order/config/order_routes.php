@@ -19,5 +19,6 @@ $route[FUEL_ROUTE.'order/export_excel'] 					= ORDER_FOLDER.'/order_manage/expor
 $route[FUEL_ROUTE.'order/reply_prod_reply/(:num)']          = ORDER_FOLDER.'/order_manage/reply_prod_reply/$1';
 $route[FUEL_ROUTE.'order/do_reply'] 		                = ORDER_FOLDER.'/order_manage/do_reply';
 $route[FUEL_ROUTE.'order/detail/del/(:num)']                = ORDER_FOLDER.'/order_manage/do_del_detail_item/$1';
+$route[FUEL_ROUTE.'order/update/status']                    = ORDER_FOLDER.'/order_manage/do_update_order_status';
 $route[FUEL_ROUTE.'order/set/order_status/(:num)/(:num)']   = ORDER_FOLDER.'/order_manage/set_order_status/$1/$2';
 ?>

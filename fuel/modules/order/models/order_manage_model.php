@@ -227,6 +227,20 @@ class Order_manage_model extends MY_Model {
 		return;
 	}
 
+	public function multi_update_status($order_ids, $order_status)
+	{
+		$sql = @"UPDATE mod_order SET order_status=? WHERE id IN ($order_ids)";
+		$para = array($order_status);
+		$success = $this->db->query($sql, $para);
+
+		if($success)
+		{
+			return true;
+		}
+
+		return;
+	}
+
 
 	public function get_product_export_list()
 	{

@@ -58,8 +58,8 @@
 							批次處理 <span class="caret"></span>
 						</button>
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="#" class="batch" OrderStatus="0">已處理</a></li>
-							<li><a href="#" class="batch" OrderStatus="1">未處理</a></li>
+							<li><a href="#" class="batch" OrderStatus="1">已處理</a></li>
+							<li><a href="#" class="batch" OrderStatus="0">未處理</a></li>
 						</ul>
 					</div>
 					<button type="button" class="btn btn-danger del-all" style="height:34px;"><i class="glyphicon glyphicon-trash"></i></button>
@@ -160,6 +160,15 @@
 				<button type="button" class="btn btn-primary do-del">Yes</button>
 				<button type="button" class="btn btn-primary do-del-all">Yes</button>
 			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade modal-sm" id="myModalStatus">
+	<div class="modal-dialog modal-sm" style="width:200px">
+	<div class="modal-content">
+		<div class="modal-body">
+			<h4>處理中...請稍後</h4>
+		</div>
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
@@ -309,6 +318,59 @@
 
 				},
 			});
+		});
+
+		$j(".batch").on("click", function(){
+
+			var orderid = [];
+			var j = 0;
+			var postData = {};
+			var api_url = '<?php echo $batch_url?>';
+			$j("input[name='order_id[]']").each(function(i){
+				if($j(this).prop("checked"))
+				{
+					orderid[j] = $j(this).attr('orderid');
+					j++;
+				}
+			});
+
+			if(j == 0)
+			{
+				alert("請選擇您要批次處理的項目");
+				return false;
+			}
+			$j('#myModalStatus').modal('toggle');
+			postData = {'orderids': orderid, 'order_status': $(this).attr('OrderStatus')};
+			$j.ajax({
+				url: api_url,
+				type: 'POST',
+				async: true,
+				crossDomain: false,
+				cache: false,
+				data: postData,
+				success: function(data, textStatus, jqXHR){
+					var data_json=jQuery.parseJSON(data);
+
+					$j('#myModalStatus').modal('hide');
+					if(data_json.status == 1)
+					{
+						$j(".notify .alert span").text('更新成功');
+						$j(".notify .alert").removeClass('alert-danger');
+						$j(".notify .alert").addClass('alert-success');
+						$j(".notify").fadeIn(100).fadeOut(1000);
+						setTimeout("update_page()", 500);
+					}
+					else
+					{
+						$j(".notify .alert span").text('更新失敗');
+						$j(".notify .alert").removeClass('alert-success');
+						$j(".notify .alert").addClass('alert-danger');
+						$j(".notify").fadeIn(100).fadeOut(1000);
+					}
+
+				},
+			});
+			
 		});
 	});
 
